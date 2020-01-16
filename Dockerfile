@@ -1,8 +1,7 @@
 FROM centos:latest
 RUN yum -y install epel-release
 RUN yum -y install python36
-RUN yum list |grep python-pip |awk '{printf $1}'
-RUN yum -y install python-pip
+RUN yum -y install python-pip.noarch
 RUN pip install -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com Flask
 
 RUN mkdir /projects
