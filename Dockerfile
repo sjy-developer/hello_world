@@ -1,7 +1,7 @@
 FROM centos:latest
 RUN yum -y install epel-release
 RUN yum -y install python-pip
-RUN pip install -i http://pypi.douban.com/simple/ --trusted-host pypi.douban.com Flask
+RUN pip install -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com Flask
 
 RUN mkdir /projects
 WORKDIR /projects
